@@ -23,7 +23,7 @@ describe('Find some of the others in array', () => {
     assert.deepEqual(solutions, [-17, -31, -27, 0, -25]);
   });
 
-  it('4', () => {
+  it('5', () => {
     const solutions = sumOfOther([516, 5824, -652, 784, 0, -6521, 75]);
     assert.deepEqual(solutions, [-490, -5798, 678, -758, 26, 6547, -49]);
   });

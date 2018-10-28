@@ -4,7 +4,7 @@
   "description": "Implementation of 3 functions for Code-Jam-3",
   "main": "make.js",
   "scripts": {
-    "test": "mocha ./test/test_sumOfOther.js"
+    "test": "mocha ./test/test_*"
   },
   "repository": {
     "type": "git",
