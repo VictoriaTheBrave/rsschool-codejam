@@ -1,0 +1,30 @@
+{
+  "name": "codejam-3_corejs",
+  "version": "1.0.0",
+  "description": "Implementation of 3 functions for Code-Jam-3",
+  "main": "make.js",
+  "scripts": {
+    "test": "mocha ./test/test_*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VictoriaTheBrave/rsschool-codejam.git"
+  },
+  "author": "Victoria Likhuta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VictoriaTheBrave/rsschool-codejam/issues"
+  },
+  "homepage": "https://github.com/VictoriaTheBrave/rsschool-codejam#readme",
+  "devDependencies": {
+    "eslint": "^5.8.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "mocha": "^5.2.0"
+  },
+  "dependencies": {
+    "eslint-config-airbnb": "^17.1.0"
+  }
+}
