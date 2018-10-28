@@ -1,20 +1,20 @@
-module.exports = function make () {
-  if(typeof arguments[0] === 'function'){
-    return {TypeError : "Can't call function make with empty array as argument"};
+module.exports = function make(...args) {
+  if (typeof args[0] === 'function') {
+    return { TypeError: "Can't call function make with empty array as argument" };
   }
-  let argumentsArray = [].slice.call(arguments);
-  let func= function () {
-    for (let i = 0; i < arguments.length; i++) {
-      if(typeof arguments[i] !== 'function'){
-        argumentsArray.push(arguments[i]);
+  const argumentsArray = [].slice.call(args);
+  function func(...arg) {
+    for (let i = 0; i < arg.length; i += 1) {
+      if (typeof arg[i] !== 'function') {
+        argumentsArray.push(arg[i]);
       } else {
         if (argumentsArray.length === 0) {
-          return {TypeError : "Can't call function make with empty array as argument"};
+          return { TypeError: "Can't call function make with empty array as argument" };
         }
-        return argumentsArray.reduce(arguments[i]);
+        return argumentsArray.reduce(arg[i]);
       }
     }
-    return func; 
+    return func;
   }
   return func;
-}
+};

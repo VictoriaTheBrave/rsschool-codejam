@@ -1,4 +1,5 @@
 const assert = require('assert');
+
 Object.freeze(assert);
 const sumOfOther = require('../src/sumOfOther.js');
 
@@ -27,5 +28,4 @@ describe('Find some of the others in array', () => {
     const solutions = sumOfOther([516, 5824, -652, 784, 0, -6521, 75]);
     assert.deepEqual(solutions, [-490, -5798, 678, -758, 26, 6547, -49]);
   });
-  
 });

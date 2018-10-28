@@ -1,6 +1,8 @@
 const assert = require('assert');
+
 Object.freeze(assert);
 const make = require('../src/make.js');
+
 function sum(a, b) {
   return a + b;
 }
@@ -10,7 +12,7 @@ function distract(a, b) {
 }
 
 function sumAge(a, b) {
-  if(typeof a === "object"){
+  if (typeof a === 'object') {
     return a.age + b.age;
   }
   return a + b.age;
@@ -23,7 +25,7 @@ describe('Return result of make function', () => {
   });
 
   it('2', () => {
-    assert.deepEqual(make(sum), {TypeError: "Can't call function make with empty array as argument"});
+    assert.deepEqual(make(sum), { TypeError: "Can't call function make with empty array as argument" });
   });
 
   it('3', () => {
@@ -32,7 +34,7 @@ describe('Return result of make function', () => {
   });
 
   it('4', () => {
-    assert.deepEqual(make(sum), {TypeError: "Can't call function make with empty array as argument"});
+    assert.deepEqual(make(sum), { TypeError: "Can't call function make with empty array as argument" });
   });
 
   it('5', () => {
@@ -46,7 +48,7 @@ describe('Return result of make function', () => {
   });
 
   it('7', () => {
-    const solutions = make({age: 25, name: 'Alice'})({age: 65, name: 'Piter'}, {name: 'Charley', age: 35})(sumAge);
+    const solutions = make({ age: 25, name: 'Alice' })({ age: 65, name: 'Piter' }, { name: 'Charley', age: 35 })(sumAge);
     assert.deepEqual(solutions, 125);
   });
 
