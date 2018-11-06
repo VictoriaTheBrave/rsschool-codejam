@@ -56,4 +56,9 @@ describe('Return result of make function', () => {
     const solutions = make(870, 15, 68)(60, -53, -95)(distract);
     assert.deepEqual(solutions, 875);
   });
+
+  it('9', () => {
+    const solutions = make(15, 10, 10, sum);
+    assert.deepEqual(solutions, 35);
+  });
 });
